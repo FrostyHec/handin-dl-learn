@@ -21,9 +21,10 @@ class AddOperator(AbstractOperator):
         return Node(value=x0.value + x1.value, children=children, operator=self)
 
     def backward(self, children: list["Node"], grad: Number):
-        for e in  AU.getN(children,2):
-            e:Node
+        for e in AU.getN(children, 2):
+            e: Node
             e.backward(grad)
+
 
 class MulOperator(AbstractOperator):
 
@@ -33,10 +34,10 @@ class MulOperator(AbstractOperator):
 
     def backward(self, children: list["Node"], grad: Number):
         x0, x1 = AU.getN(children, 2)
-        x0:Node
-        x1:Node
-        x0.backward(x1.value*grad)
-        x1.backward(x0.value*grad)
+        x0: Node
+        x1: Node
+        x0.backward(x1.value * grad)
+        x1.backward(x0.value * grad)
 
 
 class OperatorTypes(Enum):
@@ -57,18 +58,27 @@ class Node:
         return operator_type.value.calculate(nodes)
 
     def backward(self, backward_grad=None):
-        if not self.require_grad: # not require grad
+        if not self.require_grad:
             return
-        # init & accumulate grad
-        if backward_grad is None:  # root node
-            self.grad = 1
-        else:
-            if self.grad is None:
-                self.grad = 0
-            self.grad += backward_grad
-        if self.operator is None: # leaf node, terminate
+        # 1. 计算当前这次传入的梯度
+        if backward_grad is None:  # 根结点
+            backward_grad = 1
+
+        # 2. 累加到自己的梯度
+        if self.grad is None:
+            self.grad = 0
+        self.grad += backward_grad
+
+        # 3. 继续传播 *本次* backward_grad
+        if self.operator is not None:
+            self.operator.backward(self.children, backward_grad)
+
+    def zero_grad(self):
+        self.grad = None
+        if self.children is None:
             return
-        self.operator.backward(self.children, self.grad)
+        for c in self.children:
+            c.zero_grad()
 
 
 class NodeWrapper:
@@ -92,14 +102,19 @@ class NodeWrapper:
     def backward(self):
         self.node.backward()
 
+    def zero_grad(self):
+        self.node.zero_grad()
+
+
 class Var(NodeWrapper):
     def __init__(self, value):
         super().__init__(Node(value))
 
+
 class Const(NodeWrapper):
 
     def __init__(self, value):
-        super().__init__(Node(value,require_grad=False))
+        super().__init__(Node(value, require_grad=False))
 
 
 if __name__ == "__main__":
@@ -108,7 +123,19 @@ if __name__ == "__main__":
     x = Var(4)
     k = Var(5)
     g = Var(6)
-    y = c*z*x+k*x+g
+    y = c * z * x + k * x + g
 
     y.backward()
-    print(f"x.grad:{x.grad};z.grad:{z.grad};k.grad:{k.grad};g.grad:{g.grad}")
+    print(f"y:  x.grad:{x.grad};z.grad:{z.grad};k.grad:{k.grad};g.grad:{g.grad}")
+    assert x.grad == (c * z + k).value
+    assert z.grad == (c * x).value
+    assert g.grad == 1
+    assert k.grad == x.value
+    print("y assertion passed!")
+    y.zero_grad()
+
+    y2 = x*x
+    y2.backward()
+    print(f"y2:  x.grad:{x.grad}")
+    assert x.grad == (Const(2) * x).value
+    print("y2 assertion passed!")
