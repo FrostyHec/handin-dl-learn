@@ -1,0 +1,26 @@
+##ignore this file##
+/target/
+/.idea/
+/.settings/
+/.vscode/
+/bin/
+
+.classpath
+.project
+.settings
+.idea
+
+# specified ignoring
+dataset
+origin_tools
+___temp
+logs
+output
+tools
+models
+__pycache__
+*.pyc
+
+# Iris config
+src/adapted_tools/iris/config.py
+src/adapted_tools/iris/results
