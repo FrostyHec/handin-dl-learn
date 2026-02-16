@@ -21,6 +21,5 @@ models
 __pycache__
 *.pyc
 
-# Iris config
-src/adapted_tools/iris/config.py
-src/adapted_tools/iris/results
+# Self defined config
+data

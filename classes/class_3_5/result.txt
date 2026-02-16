@@ -1,0 +1,109 @@
+/home/ZDHuang/anaconda3/envs/myhandindl/bin/python /home/ZDHuang/WorkDir/handin-dl/handin-dl-learn/classes/class_3_5/load_speed_test.py
+[workers=  1] bs=    1  speed=   395.9 samples/s
+[workers=  1] bs=    2  speed=   794.6 samples/s
+[workers=  1] bs=    4  speed=  1407.5 samples/s
+[workers=  1] bs=    8  speed=  2296.9 samples/s
+[workers=  1] bs=   16  speed=  3789.3 samples/s
+[workers=  1] bs=   32  speed=  5995.6 samples/s
+[workers=  1] bs=   64  speed=  8526.3 samples/s
+[workers=  1] bs=  128  speed= 10799.4 samples/s
+[workers=  1] bs=  256  speed= 12857.2 samples/s
+[workers=  1] bs=  512  speed= 14087.9 samples/s
+[workers=  1] bs= 1024  speed= 14822.2 samples/s
+[workers=  1] bs= 2048  speed= 14842.1 samples/s
+[workers=  1] bs= 4096  speed= 13425.7 samples/s
+[workers=  1] bs= 8192  speed= 13135.7 samples/s
+[workers=  1] bs=16384  speed= 12625.0 samples/s
+[workers=  2] bs=    1  speed=   387.9 samples/s
+[workers=  2] bs=    2  speed=   674.8 samples/s
+[workers=  2] bs=    4  speed=  1522.1 samples/s
+[workers=  2] bs=    8  speed=  3233.7 samples/s
+[workers=  2] bs=   16  speed=  5761.1 samples/s
+[workers=  2] bs=   32  speed=  8848.0 samples/s
+[workers=  2] bs=   64  speed= 13180.3 samples/s
+[workers=  2] bs=  128  speed= 18312.2 samples/s
+[workers=  2] bs=  256  speed= 22965.3 samples/s
+[workers=  2] bs=  512  speed= 26339.8 samples/s
+[workers=  2] bs= 1024  speed= 27961.5 samples/s
+[workers=  2] bs= 2048  speed= 27605.6 samples/s
+[workers=  2] bs= 4096  speed= 25241.6 samples/s
+[workers=  2] bs= 8192  speed= 22779.2 samples/s
+[workers=  2] bs=16384  speed= 21032.1 samples/s
+[workers=  4] bs=    1  speed=   373.5 samples/s
+[workers=  4] bs=    2  speed=   727.0 samples/s
+[workers=  4] bs=    4  speed=  1318.9 samples/s
+[workers=  4] bs=    8  speed=  2717.0 samples/s
+[workers=  4] bs=   16  speed=  5395.9 samples/s
+[workers=  4] bs=   32  speed= 10338.4 samples/s
+[workers=  4] bs=   64  speed= 17241.1 samples/s
+[workers=  4] bs=  128  speed= 26766.9 samples/s
+[workers=  4] bs=  256  speed= 35949.2 samples/s
+[workers=  4] bs=  512  speed= 43207.1 samples/s
+[workers=  4] bs= 1024  speed= 48237.7 samples/s
+[workers=  4] bs= 2048  speed= 46102.5 samples/s
+[workers=  4] bs= 4096  speed= 41663.7 samples/s
+[workers=  4] bs= 8192  speed= 40508.2 samples/s
+[workers=  4] bs=16384  speed= 39713.1 samples/s
+[workers=  8] bs=    1  speed=   287.9 samples/s
+[workers=  8] bs=    2  speed=   558.6 samples/s
+[workers=  8] bs=    4  speed=  1103.2 samples/s
+[workers=  8] bs=    8  speed=  2201.0 samples/s
+[workers=  8] bs=   16  speed=  4296.8 samples/s
+[workers=  8] bs=   32  speed=  7800.9 samples/s
+[workers=  8] bs=   64  speed= 16872.5 samples/s
+[workers=  8] bs=  128  speed= 30974.8 samples/s
+[workers=  8] bs=  256  speed= 48169.0 samples/s
+[workers=  8] bs=  512  speed= 63609.4 samples/s
+[workers=  8] bs= 1024  speed= 71272.0 samples/s
+[workers=  8] bs= 2048  speed= 67671.6 samples/s
+[workers=  8] bs= 4096  speed= 64404.2 samples/s
+[workers=  8] bs= 8192  speed= 61129.9 samples/s
+[workers=  8] bs=16384  speed= 38100.5 samples/s
+[workers= 16] bs=    1  speed=   171.1 samples/s
+[workers= 16] bs=    2  speed=   368.3 samples/s
+[workers= 16] bs=    4  speed=   728.2 samples/s
+[workers= 16] bs=    8  speed=  1459.7 samples/s
+[workers= 16] bs=   16  speed=  2631.5 samples/s
+[workers= 16] bs=   32  speed=  5777.2 samples/s
+[workers= 16] bs=   64  speed= 10340.5 samples/s
+[workers= 16] bs=  128  speed= 19466.7 samples/s
+[workers= 16] bs=  256  speed= 35554.9 samples/s
+[workers= 16] bs=  512  speed= 71801.1 samples/s
+[workers= 16] bs= 1024  speed= 80836.3 samples/s
+[workers= 16] bs= 2048  speed= 76926.3 samples/s
+[workers= 16] bs= 4096  speed= 70906.4 samples/s
+[workers= 16] bs= 8192  speed= 53919.1 samples/s
+[workers= 16] bs=16384  speed= 33949.4 samples/s
+[workers= 32] bs=    1  speed=   105.2 samples/s
+[workers= 32] bs=    2  speed=   235.6 samples/s
+[workers= 32] bs=    4  speed=   473.0 samples/s
+[workers= 32] bs=    8  speed=   857.3 samples/s
+[workers= 32] bs=   16  speed=  1796.5 samples/s
+[workers= 32] bs=   32  speed=  3636.0 samples/s
+[workers= 32] bs=   64  speed=  7094.9 samples/s
+[workers= 32] bs=  128  speed= 13912.1 samples/s
+[workers= 32] bs=  256  speed= 26303.8 samples/s
+[workers= 32] bs=  512  speed= 54416.5 samples/s
+[workers= 32] bs= 1024  speed= 63280.7 samples/s
+[workers= 32] bs= 2048  speed= 59608.1 samples/s
+[workers= 32] bs= 4096  speed= 54183.5 samples/s
+[workers= 32] bs= 8192  speed= 41981.7 samples/s
+[workers= 32] bs=16384  speed= 29599.7 samples/s
+[workers=128] bs=    1  speed=    33.1 samples/s
+[workers=128] bs=    2  speed=    64.0 samples/s
+[workers=128] bs=    4  speed=   129.1 samples/s
+[workers=128] bs=    8  speed=   257.8 samples/s
+[workers=128] bs=   16  speed=   515.7 samples/s
+[workers=128] bs=   32  speed=   970.5 samples/s
+[workers=128] bs=   64  speed=  2029.0 samples/s
+[workers=128] bs=  128  speed=  3980.0 samples/s
+[workers=128] bs=  256  speed=  7844.3 samples/s
+[workers=128] bs=  512  speed= 15996.0 samples/s
+[workers=128] bs= 1024  speed= 20071.2 samples/s
+[workers=128] bs= 2048  speed= 19927.1 samples/s
+[workers=128] bs= 4096  speed= 19216.3 samples/s
+[workers=128] bs= 8192  speed= 17418.8 samples/s
+[workers=128] bs=16384  speed= 13967.5 samples/s
+Figure saved to loader_speed_workers.png
+
+Process finished with exit code 0
